@@ -32,15 +32,12 @@ img {
 	border-radius: 4px;
 	width: 30%;
 }
-.webLink {
-	color: white;
-}
 
 .blog {
 	width: 10%;
 }
 
-.projectLink {
+.link {
 	color: white;
 }
 .project {
@@ -122,12 +119,29 @@ section {
 /* Footer Styles */
 .page__footer {
 	background: #000;
-	padding: 3em;
+	padding: 2em;
 	color: #fff;
+	text-align: center;
 }
 
 .page__footer p {
 	color: #fff;
+	text-align: center;
+}
+.social-footer-icons .fa {
+	font-size: 1rem;
+	padding: 5px;
+	color: #fefefe;
+	text-align: center;
+}
+
+.social-footer-icons .fa:hover {
+	color: #4a4a4a;
+	transition: color 0.3s ease-in;
+}
+
+.social-footer-ul {
+	margin-left: -25px;
 }
 
 /* ---- Theme Rules ---- */
