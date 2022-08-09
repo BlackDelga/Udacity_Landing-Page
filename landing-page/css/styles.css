@@ -28,6 +28,25 @@ h1 {
 	margin: 2em 1rem;
 }
 
+img {
+	border-radius: 4px;
+	width: 30%;
+}
+.webLink {
+	color: white;
+}
+
+.blog {
+	width: 10%;
+}
+
+.projectLink {
+	color: white;
+}
+.project {
+	display: inherit;
+}
+
 @media only screen and (min-width: 35em) {
 	h1 {
 		font-size: 7em;
