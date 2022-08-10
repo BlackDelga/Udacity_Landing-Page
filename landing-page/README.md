@@ -1,23 +1,19 @@
-# The General Text
-this is the landing page project readme
+# General text
+
+this project is about real-world scenarios of manipulating the DOM. This project serves as to prepare me for appending dynamically added data to the DOM, and to show me how javascript can improve the usability of an otherwise static site.
 
 ## the languages used:
+
 - HTML
 - CSS
 - JAVASCRIPT
 
-## The Functionalities
+# the Functionalities
 
-- The Navigation
-- The dynamic active
-- The scrolling effect
+- the Navigation
+- the dynamic active
+- the scrolling eFFect
 
-## What did we learned:
-in this project we converted the static web project to a dynamic project
+# What I learn
 
-## How to use the project:
-
-first you open your browser
-second you click `ctrl+O`
-third you navigate to your index.html
-forth you click on it
+I learn how to use javascript to manipulate the DOM and create a dynamic project

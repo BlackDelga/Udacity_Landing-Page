@@ -1,115 +1,56 @@
-/**
- *
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- *
- * Dependencies: None
- *
- * JS Version: ES2015/ES6
- *
- * JS Standard: ESlint
- *
+/*
+ Define Global Variables
  */
+const sections = Array.from(document.querySelectorAll("section"));
+const menu = document.getElementById("navbar__list");
+let numberOfListItems = sections.length;
 
-/**
- * Define Global Variables
- *
+/*
+End Global Variables
+Start Helper Functions
  */
-// navigation global var
-const navigation = document.getElementById("navbar__list");
-// sections global var
-const sections = document.querySelectorAll("section");
+function createListItem() {
+	for (section of sections) {
+		sectioName = section.getAttribute("data-nav");
+		sectionLink = section.getAttribute("id");
+		//create an item for each one
+		listItem = document.createElement("li");
 
-/**
- * End Global Variables
- * Start Helper Functions
- *
- */
+		// add the item text here
+		listItem.innerHTML = `<a class='menu__link' href='#${sectionLink}'>${sectioName}</a>`;
 
-/**
- * End Helper Functions
- * Begin Main Functions
- *
- */
+		// add listItem to the menu here
+		menu.appendChild(listItem);
+	}
+}
+
+//Determines if sections is in the viewport
+function sectionInViewPort(elem) {
+	let sectionPos = elem.getBoundingClientRect();
+	return sectionPos.top >= 0;
+}
+
+//if the section being viewed give a different style (appearance)
+function toggleActiveClass() {
+	for (section of sections) {
+		//if the section is in the viewport
+		if (sectionInViewPort(section)) {
+			//check if it doesn't already contain "your-active-class"
+			if (!section.classList.contains("your-active-class")) {
+				//then add it
+				section.classList.add("your-active-class");
+			}
+		} else {
+			//if it's not there then remove "your-active-class"
+			section.classList.remove("your-active-class");
+		}
+	}
+}
+
+// End Helper Functions
 
 // build the nav
-
-const navBuilder = () => {
-	let navUI = "";
-	// looping over all sections
-	sections.forEach((section) => {
-		const sectionID = section.id;
-		const sectionDataNav = section.dataset.nav;
-
-		navUI += `<li><a class="menu__link" href="#${sectionID}">${sectionDataNav}</a></li>`;
-	});
-	// append all elements to the navigation
-	navigation.innerHTML = navUI;
-};
-
-navBuilder();
+createListItem();
 
 // Add class 'active' to section when near top of viewport
-
-// getting the largest value that's less or equal to the number
-const offset = (section) => {
-	return Math.floor(section.getBoundingClientRect().top);
-};
-
-// remove the active class
-const removeActive = (section) => {
-	section.classList.remove("your-active-class");
-	section.style.cssText =
-		"background-color: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%)";
-};
-// adding the active class
-const addActive = (conditional, section) => {
-	if (conditional) {
-		section.classList.add("your-active-class");
-		section.style.cssText = "background-color: 00FFFFFF;";
-	}
-};
-
-//implementating the actual function
-
-const sectionActivation = () => {
-	sections.forEach((section) => {
-		const elementOffset = offset(section);
-
-		inviewport = () => elementOffset < 150 && elementOffset >= -150;
-
-		removeActive(section);
-		addActive(inviewport(), section);
-	});
-};
-
-window.addEventListener("scroll", sectionActivation);
-
-// Scroll to anchor ID using scrollTO event
-
-const scrolling = () => {
-	const links = document.querySelectorAll(".navbar__menu a");
-	links.forEach((link) => {
-		link.addEventListener("click", () => {
-			for (i = 0; i < sections; i++) {
-				sections[i].addEventListener("click", sectionScroll(link));
-			}
-		});
-	});
-};
-
-scrolling();
-
-/**
- * End Main Functions
- * Begin Events
- *
- */
-
-// Build menu
-
-// Scroll to section on link click
-
-// Set sections as active
+document.addEventListener("scroll", toggleActiveClass);
