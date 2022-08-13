@@ -10,12 +10,11 @@ html {
 }
 
 body {
-	background-color: #eee;
+	background-color: #98ccd3;
 }
 
 header {
 	background-color: #fff;
-	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 header nav {
@@ -24,7 +23,7 @@ header nav {
 	align-items: center;
 	padding-left: 142px;
 	padding-right: 142px;
-	background-color: black;
+	background-color: #132238;
 }
 
 header nav h1 {
@@ -34,7 +33,6 @@ header nav h1 {
 
 header nav .tabs {
 	list-style-type: none;
-
 	display: flex;
 	justify-content: flex-end;
 }
@@ -53,12 +51,14 @@ header nav .tabs .tab a[data-switcher] {
 }
 
 header nav .tabs .tab:hover a[data-switcher] {
-	background-color: blue;
+	background-color: #98ccd3;
+	color: #132238;
 }
 
 header nav .tabs .tab.is-active a[data-switcher] {
-	background-color: blue;
-	font-weight: 700;
+	background-color: #98ccd3;
+	font-weight: 900;
+	color: #132238;
 }
 
 main {
@@ -71,8 +71,8 @@ main {
 	margin-top: 100px;
 	padding: 50px 30px;
 	border-radius: 8px;
-	background-color: #fff;
-	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+	background-color: #ebf0f6;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .pages .page {
@@ -101,16 +101,50 @@ img {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: black;
+	background-color: #132238;
 	color: #fff;
 	text-align: center;
+	display: block;
 }
 
 .social-footer-ul .fa {
 	color: white;
+	padding-right: 5px;
+	padding-top: 5px;
 }
 
 .social-footer-ul .fa:hover {
 	color: lightblue;
 	transition: color 0.3s ease-in;
+}
+.social-footer-ul {
+	float: right;
+	display: block;
+	padding-right: 150px;
+}
+
+.copyright {
+	float: left;
+	display: block;
+	padding-left: 150px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.nav_menu {
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
