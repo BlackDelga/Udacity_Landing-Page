@@ -4,42 +4,37 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Evan Landing Page</title>
-		<!-- Load Google Fonts -->
-		<link
-			href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- Load Styles -->
-		<link href="css/styles.css" rel="stylesheet" />
+		<title>Evan_Landing_Page</title>
+
+		<link rel="stylesheet" href="/landing-page/css/styles.css" />
 	</head>
 	<body>
-		<!-- HTML Follows BEM naming conventions 
-  IDs are only used for sections to connect menu achors to sections -->
-		<header class="page__header">
-			<nav class="navbar__menu">
-				<!-- Navigation starts as empty UL that will be populated with JS -->
-				<ul id="navbar__list"></ul>
+		<header>
+			<nav class="nav_menu">
+				<h1>Personal Web</h1>
+				<ul class="tabs">
+					<li class="tab is-active">
+						<a data-switcher data-tab="1">About</a>
+					</li>
+					<li class="tab">
+						<a data-switcher data-tab="2">Blog</a>
+					</li>
+					<li class="tab">
+						<a data-switcher data-tab="3">Project</a>
+					</li>
+					<li class="tab">
+						<a data-switcher data-tab="4">Contact</a>
+					</li>
+				</ul>
 			</nav>
 		</header>
 		<main>
-			<header class="main__hero">
-				<h1>Personal Web</h1>
-			</header>
-			<!-- Each Section has an ID (used for the anchor) and 
-    a data attribute that will populate the li node.
-    Adding more sections will automatically populate nav.
-    The first section is set to active class by default -->
-			<section id="section1" data-nav="Section 1" class="your-active-class">
-				<div class="landing__container">
-					<h2>About Me</h2>
+			<section class="pages">
+				<div class="page is-active" data-page="1">
+					<h2>About Me!</h2>
 					<img src="img/user-photo.jpg" alt="" />
-					<p>
-						Front End Developer and Co-Founder
-						<a class="link" href="https://www.delga.tech/" target="_blank">
-							@delgatechdesign</a
-						>
-					</p>
+					<p><em>End Developer and Co-Founder</em></p>
+					<br />
 					<p>
 						From the moment I created my first Website, I knew I was hooked into
 						the world of software development. But software development has
@@ -47,59 +42,71 @@
 						with an engaging challenge to continually learn and improving my
 						skills.
 					</p>
-					<h3>Experience</h3>
-					<p>Git, Github, HTML, CSS, JavaScript, JQuery, Express.js, Npm</p>
+					<br />
+					<p><em>Experience</em></p>
+					<br />
+					<p>Git, Github, HTML, CSS, JavaScript, JQuery, Express.js, Npm.</p>
 				</div>
-			</section>
-			<section id="section2" data-nav="Section 2">
-				<div class="landing__container">
-					<h2>Blog</h2>
-					<p>
-						Supercharged Entertainment. <br />
+				<div class="page" data-page="2">
+					<h2>Blog Page</h2>
+					<br/>
+					<p>Welcome to the Blog page</p>
+					<br/>
+					<p>Supercharged Entertainment.
+						<br/>
+						<br/>
 						Supercharged Entertainment is the premier indoor event and party
 						center for New England, offering the perfect customized experience
 						for Corporate Events, Private Parties, Group Outings, Birthdays,
 						Bachelor/ette Parties, Bar/Bat Mitzvahs, and so much more!
 					</p>
+					<br/>
 					<div>
-						<a
-							href="https://www.youtube.com/watch?v=Y7gEknNahuo"
-							target="_blank"
-							><img alt="" src="img/race.jpg"
-						/></a>
-					</div>
+                       <a
+                           href="https://www.youtube.com/watch?v=Y7gEknNahuo"
+                           target="_blank"
+                           ><img alt="" src="img/race.jpg"
+                       /></a>
+                   </div>
 				</div>
-			</section>
-			<section id="section3" data-nav="Section 3">
-				<div class="landing__container">
+				<div class="page" data-page="3">
 					<h2>Project</h2>
-					<div class="project">
+					<br />
+					<p>Welcome to the Project page. Here is two exemplo of project that I completed. You can find more <a target="_blank" href="https://github.com/BlackDelga?tab=repositories">here</a></p>
+					<br />
+					<div>
 						<a
 							class="link"
 							href="https://blackdelga.github.io/Techdegree_Project_1/"
 							target="_blank"
 							><h4>A Random Quote Generator</h4>
+							<br/>
 							<img alt="" src="img/P1_550x550.jpg" />
+							<br/>
 						</a>
+						<br/>
 						<a
 							class="link"
 							href="https://blackdelga.github.io/Techdegree_Project_2/"
 							target="_blank"
 						>
 							<h4>Pagination</h4>
+							<br/>
 							<img alt="" src="img/P2_550x550.jpg" />
 						</a>
 					</div>
 				</div>
-			</section>
-			<section id="section4" data-nav="Section 4">
-				<div class="landing__container">
+				</div>
+				<div class="page" data-page="4">
 					<h2>Contact</h2>
-					<h3>Here is where you can contact me.</h3>
+					<br />
+					<p><em>Here is where you can contact me.</em></p>
+					<br />
 					<p>
 						<i class="fa-solid fa-phone"></i>
 						<a class="link" href="tel:8573527106"> 857-352-7106</a>
 					</p>
+					<br />
 					<p>
 						<i class="fa-solid fa-envelope"></i>
 						<a class="link" href="mailto:evanbdelgado@gmail.com" target="_blank"
@@ -109,32 +116,30 @@
 				</div>
 			</section>
 		</main>
-
-		<footer class="page__footer">
+		<div class="footer">
 			<p>&copy Evandro Delgado</p>
-			<div class="social-footer-icons">
-				<ul class="social-footer-ul">
-					<a target="_blank" href="https://www.facebook.com/"
-						><i class="fa fa-facebook" aria-hidden="true"></i
-					></a>
+			<ul class="social-footer-ul">
+				<a target="_blank" href="https://www.facebook.com/"
+					><i class="fa fa-facebook" aria-hidden="true"></i
+				></a>
 
-					<a target="_blank" href="https://www.instagram.com/blackdelga/"
-						><i class="fa fa-instagram" aria-hidden="true"></i
-					></a>
+				<a target="_blank" href="https://www.instagram.com/blackdelga/"
+					><i class="fa fa-instagram" aria-hidden="true"></i
+				></a>
 
-					<a
-						href="https://www.linkedin.com/in/evandro-delgado-756762b9/"
-						target="_blank"
-						><i class="fa fa-linkedin"></i
-					></a>
+				<a
+					href="https://www.linkedin.com/in/evandro-delgado-756762b9/"
+					target="_blank"
+					><i class="fa fa-linkedin"></i
+				></a>
 
-					<a target="_blank" href="https://twitter.com/EvandroBDelgad1"
-						><i class="fa fa-twitter" aria-hidden="true"></i
-					></a>
-				</ul>
-			</div>
-		</footer>
-		<script src="js/app.js"></script>
+				<a target="_blank" href="https://twitter.com/EvandroBDelgad1"
+					><i class="fa fa-twitter" aria-hidden="true"></i
+				></a>
+			</ul>
+		</div>
+
+		<script src="/landing-page/js/app.js"></script>
 		<script
 			src="https://kit.fontawesome.com/850879e6a9.js"
 			crossorigin="anonymous"
