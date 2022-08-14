@@ -34,7 +34,7 @@
 			<section class="pages">
 				<div class="page is-active" data-page="1">
 					<div >
-						<img src="img/user-photo.jpg" alt="" />
+						<img class="imgUser" src="img/user-photo.jpg" alt="" />
 					<br />
 					<p>
 						I'm a highly skilled professional with over 2 years of experience in developing software at a smaller scale, mostly building websites. 
@@ -56,76 +56,108 @@
 						I moved to the USA about 10 years ago with the goal to pursue a degree in Computer Science.
 						So much happened since I moved here that i couldn't pursue my goal. However, with much persistence I am now at Udacity chasing after the dream of becoming a developer and working to build my own business at the same time. 
 						I couldn't have achieved so much without my lovely family and fantastic group of supporting friends. 
-						From discovering my passions and learning, I also enjoy racing, playing soccer with my son, Ian, and so much more. 
+						From discovering my passions and learning, I also enjoy racing, playing soccer with my son, Ian, and build amazing video effect. 
 						I've included all of them below so you get to learn a little more about the fun things in my life, although it's not all roses and rainbows it's still a whole lot of fun.</p>
 					<br/>
-					<div class="aboutVideo">
-						<figcaption>Race</figcaption>
+					<div class="grid">
 							<a
 								href="https://www.youtube.com/watch?v=Y7gEknNahuo"
 								target="_blank"
-								
-								> <figure>
+								>
+								<figure>
 									<img alt="" src="img/race.jpg"/>
+									<figcaption>Supercharged Entertainment</figcaption>
 								</figure>
+
 							</a>
-					</div>
-					<div class="aboutVideo">
-						<figcaption class="fifa">fifa</figcaption>
 							<a
-								href="https://www.youtube.com/watch?v=Y7gEknNahuo"
+								href="https://www.youtube.com/watch?v=ZnMNscHGPuk&ab_channel=EvandroDelgado"
 								target="_blank"
-								
-								> <figure>
-									<img alt="" src="img/race.jpg"/>
+								>
+								<figure>
+									<img alt="" src="img/fifa_22.jpeg"/>
+									<figcaption>FiFa 22</figcaption>
+								</figure>
+
+							</a>
+							<a
+								href="https://www.youtube.com/watch?v=zAbWGkX6iQ0&t=120s&ab_channel=LeYoungKiller"
+								target="_blank"
+								>
+								<figure>
+									<img alt="" src="img/video_effcet.jpeg"/>
+									<figcaption>Video Effect </figcaption>
 								</figure>
 							</a>
 					</div>
 				</div>
 				<div class="page" data-page="3">
-					<h2>Project</h2>
+					<h2 class="project">Project</h2>
 					<br />
-					<p>Welcome to the Project page. Here is two exemplo of project that I completed. You can find more <a target="_blank" href="https://github.com/BlackDelga?tab=repositories">here</a></p>
+					<p>Welcome to the Project page. Here is three exemplo of project that I completed. You can find more <a target="_blank" href="https://github.com/BlackDelga?tab=repositories">here</a></p>
 					<br />
-					<div>
+					<div class="grid">
 						<a
-							class="link"
 							href="https://blackdelga.github.io/Techdegree_Project_1/"
 							target="_blank"
-							><h4>A Random Quote Generator</h4>
-							<br/>
-							<img alt="" src="img/P1_550x550.jpg" />
-							<br/>
+							>
+							<figure>
+								<img alt="" src="img/P1_550x550.jpg"/>
+								<figcaption>A Random Quote Generator</figcaption>
+							</figure>
+
 						</a>
-						<br/>
 						<a
-							class="link"
 							href="https://blackdelga.github.io/Techdegree_Project_2/"
 							target="_blank"
-						>
-							<h4>Pagination</h4>
-							<br/>
-							<img alt="" src="img/P2_550x550.jpg" />
+							>
+							<figure>
+								<img alt="" src="img/P2_550x550.jpg"/>
+								<figcaption>Pagination</figcaption>
+							</figure>
+
 						</a>
-					</div>
+						<a
+							href="https://blackdelga.github.io/OOP_Game_Show_App/"
+							target="_blank"
+							>
+							<figure>
+								<img alt="" src="img/P3_550x550.jpg"/>
+								<figcaption>OOP Game Show</figcaption>
+							</figure>
+						</a>
+				</div>
 				</div>
 				</div>
 				<div class="page" data-page="4">
-					<h2>Contact</h2>
-					<br />
-					<p><em>Here is where you can contact me.</em></p>
-					<br />
-					<p>
-						<i class="fa-solid fa-phone"></i>
-						<a class="link" href="tel:8573527106"> 857-352-7106</a>
-					</p>
-					<br />
-					<p>
-						<i class="fa-solid fa-envelope"></i>
-						<a class="link" href="mailto:evanbdelgado@gmail.com" target="_blank"
-							>evanbdelgado@gmail.com</a
-						>
-					</p>
+					<div class="container">
+						<div style="text-align:center">
+						  <h2>Contact Us</h2>
+						  <br/>
+						  <br/>
+						</div>
+						<div class="row">
+						  <div class="column">
+							<img src="img/map.jpg" style="width:100%">
+						  </div>
+						  <div class="column">
+							<form>
+							  <label for="fname">First Name</label>
+							  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+							  <label for="lname">Last Name</label>
+							  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+							  <label for="country">Country</label>
+							  <select id="country" name="country">
+								<option value="australia">Other</option>
+								<option value="usa">USA</option>
+							  </select>
+							  <label for="subject">Subject</label>
+							  <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+							  <input onclick="myFunction()" type="submit" value="Submit">
+							</form>
+						  </div>
+						</div>
+					  </div>			
 				</div>
 			</section>
 		</main>

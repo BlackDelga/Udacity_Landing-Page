@@ -25,3 +25,8 @@ function SwitchPage(page_id) {
 	);
 	next_page.classList.add("is-active");
 }
+
+// alert button function
+function myFunction() {
+	alert("Thank you for your message!");
+}
