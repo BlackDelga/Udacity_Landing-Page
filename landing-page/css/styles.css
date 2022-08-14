@@ -76,7 +76,7 @@ main {
 
 .pages {
 	margin-top: 100px;
-	padding: 250px 30px;
+	padding: 280px 30px;
 	border-radius: 8px;
 	background-color: #ebf0f6;
 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
@@ -100,9 +100,16 @@ img {
 	margin-right: 1rem;
 	shape-outside: circle(50%);
 }
-/* Blog Styles */
+/* about Styles */
 .link {
 	color: black;
+}
+.about {
+	text-align: center;
+	margin-top: -200px;
+}
+.aboutVideo {
+	margin-top: 20px;
 }
 
 /* Footer Styles */
