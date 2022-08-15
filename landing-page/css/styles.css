@@ -213,6 +213,16 @@ input[type="submit"]:hover {
 	display: block;
 	padding-left: 150px;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+	.nav_menu {
+		display: list-item;
+		padding-right: 60px;
+		width: fit-content;
+	}
+	.footer {
+		padding: 20px;
+	}
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -220,6 +230,25 @@ input[type="submit"]:hover {
 	input[type="submit"] {
 		width: 100%;
 		margin-top: 0;
+	}
+	.title {
+		display: none;
+	}
+	header nav {
+		background-color: #132238;
+	}
+	.pages {
+		width: 400px;
+	}
+	.grid {
+		display: contents;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 48px;
+		padding: 30px;
+	}
+	.nav_menu {
+		display: list-item;
+		padding-right: 60px;
 	}
 }
 
@@ -229,12 +258,23 @@ input[type="submit"]:hover {
 		bottom: 0;
 		width: 100%;
 	}
+	.title {
+		display: none;
+	}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 750px) {
+	.title {
+		font-size: 25px;
+		display: block;
+	}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+	.title {
+		font-size: 25px;
+		display: block;
+	}
 }
